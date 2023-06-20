@@ -1,6 +1,6 @@
-// Generate a random password based on user criteria
+// Generate a random password
 function generatePassword() {
-  // Prompt for password length
+  // Password length
   var length = parseInt(
     prompt('Enter the desired password length (between 8 and 128 characters):')
   );
@@ -14,13 +14,13 @@ function generatePassword() {
     );
   }
 
-  // Prompt for character types
+  // Character types required
   var includeLowercase = confirm('Include lowercase characters?');
   var includeUppercase = confirm('Include uppercase characters?');
   var includeNumeric = confirm('Include numeric characters?');
   var includeSpecial = confirm('Include special characters?');
 
-  // Validate at least one character type is selected
+  // At least one character type must be selected
   while (
     !includeLowercase &&
     !includeUppercase &&
